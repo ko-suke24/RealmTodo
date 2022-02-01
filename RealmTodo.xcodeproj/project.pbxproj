@@ -11,6 +11,10 @@
 		147B1FA727A924E0008E2BDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B1FA627A924E0008E2BDD /* ContentView.swift */; };
 		147B1FA927A924E5008E2BDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147B1FA827A924E5008E2BDD /* Assets.xcassets */; };
 		147B1FAC27A924E5008E2BDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147B1FAB27A924E5008E2BDD /* Preview Assets.xcassets */; };
+		147B1FB727A925F0008E2BDD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 147B1FB627A925EF008E2BDD /* Realm */; };
+		147B1FB927A925F0008E2BDD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 147B1FB827A925F0008E2BDD /* RealmSwift */; };
+		147B1FBB27A92637008E2BDD /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B1FBA27A92637008E2BDD /* ListView.swift */; };
+		147B1FBD27A93529008E2BDD /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B1FBC27A93529008E2BDD /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,8 @@
 		147B1FA627A924E0008E2BDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		147B1FA827A924E5008E2BDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		147B1FAB27A924E5008E2BDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		147B1FBA27A92637008E2BDD /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		147B1FBC27A93529008E2BDD /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				147B1FB927A925F0008E2BDD /* RealmSwift in Frameworks */,
+				147B1FB727A925F0008E2BDD /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +59,9 @@
 		147B1FA327A924E0008E2BDD /* RealmTodo */ = {
 			isa = PBXGroup;
 			children = (
+				147B1FB427A92510008E2BDD /* View */,
+				147B1FB327A92507008E2BDD /* ViewModel */,
+				147B1FB227A924FC008E2BDD /* Model */,
 				147B1FA427A924E0008E2BDD /* RealmTodoApp.swift */,
 				147B1FA627A924E0008E2BDD /* ContentView.swift */,
 				147B1FA827A924E5008E2BDD /* Assets.xcassets */,
@@ -65,6 +76,29 @@
 				147B1FAB27A924E5008E2BDD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		147B1FB227A924FC008E2BDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		147B1FB327A92507008E2BDD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		147B1FB427A92510008E2BDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				147B1FBA27A92637008E2BDD /* ListView.swift */,
+				147B1FBC27A93529008E2BDD /* AddView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +117,10 @@
 			dependencies = (
 			);
 			name = RealmTodo;
+			packageProductDependencies = (
+				147B1FB627A925EF008E2BDD /* Realm */,
+				147B1FB827A925F0008E2BDD /* RealmSwift */,
+			);
 			productName = RealmTodo;
 			productReference = 147B1FA127A924E0008E2BDD /* RealmTodo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +149,9 @@
 				Base,
 			);
 			mainGroup = 147B1F9827A924E0008E2BDD;
+			packageReferences = (
+				147B1FB527A925EF008E2BDD /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 147B1FA227A924E0008E2BDD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				147B1FBD27A93529008E2BDD /* AddView.swift in Sources */,
 				147B1FA727A924E0008E2BDD /* ContentView.swift in Sources */,
 				147B1FA527A924E0008E2BDD /* RealmTodoApp.swift in Sources */,
+				147B1FBB27A92637008E2BDD /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +239,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -251,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -341,6 +384,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		147B1FB527A925EF008E2BDD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.20.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		147B1FB627A925EF008E2BDD /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 147B1FB527A925EF008E2BDD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		147B1FB827A925F0008E2BDD /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 147B1FB527A925EF008E2BDD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 147B1F9927A924E0008E2BDD /* Project object */;
 }
