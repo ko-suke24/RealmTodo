@@ -15,6 +15,7 @@
 		147B1FB927A925F0008E2BDD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 147B1FB827A925F0008E2BDD /* RealmSwift */; };
 		147B1FBB27A92637008E2BDD /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B1FBA27A92637008E2BDD /* ListView.swift */; };
 		147B1FBD27A93529008E2BDD /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B1FBC27A93529008E2BDD /* AddView.swift */; };
+		147B1FBF27A93AF5008E2BDD /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B1FBE27A93AF5008E2BDD /* Todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		147B1FAB27A924E5008E2BDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		147B1FBA27A92637008E2BDD /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		147B1FBC27A93529008E2BDD /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		147B1FBE27A93AF5008E2BDD /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		147B1FB227A924FC008E2BDD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				147B1FBE27A93AF5008E2BDD /* Todo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				147B1FA727A924E0008E2BDD /* ContentView.swift in Sources */,
 				147B1FA527A924E0008E2BDD /* RealmTodoApp.swift in Sources */,
 				147B1FBB27A92637008E2BDD /* ListView.swift in Sources */,
+				147B1FBF27A93AF5008E2BDD /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
