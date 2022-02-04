@@ -10,22 +10,26 @@ import SwiftUI
 struct AddView: View {
     
     @Environment(\.presentationMode) var presentasion
+    @ObservedObject var viewModel = ListViewModel.shared
     
     var body: some View {
         NavigationView {
             List {
                 Section(header: Text("タイトル")) {
-                    TextField("", text: .constant("タイトル"))
+                    TextField("", text: $viewModel.title)
                 }
                 Section(header: Text("デスクリプション")) {
-                    TextField("", text: .constant("デスクリプション"))
+                    TextField("", text: $viewModel.desc)
                 }
             }
             .navigationTitle("Todoを追加")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {print("完了")}) {
+                    Button(action: {
+                           viewModel.addTodo()
+                           viewModel.isShowAddView.toggle()
+                           }) {
                         Text("完了")
                     }
                 }
