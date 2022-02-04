@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AddView: View {
+    
+    @Environment(\.presentationMode) var presentasion
+    
     var body: some View {
         NavigationView {
             List {
@@ -27,7 +30,9 @@ struct AddView: View {
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {print("キャンセル")}) {
+                    Button(action: {
+                        presentasion.wrappedValue.dismiss()
+                    }) {
                         Text("キャンセル")
                     }
                 }
