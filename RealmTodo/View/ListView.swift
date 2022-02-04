@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ListView: View {
     
+    @ObservedObject var viewModel = ListViewModel.shared
+    
     var body: some View {
         NavigationView {
             List {
@@ -43,6 +45,20 @@ struct ListView: View {
                 }
             }
             .navigationTitle("RealmTodo")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        viewModel.isShowAddView.toggle()
+                    }) {
+                        Image(systemName: "plus")
+                            .padding(.top)
+                            .font(.title2)
+                    }
+                }
+            }
+            .sheet(isPresented: $viewModel.isShowAddView) {
+                AddView()
+            }
         }
     }
 }
